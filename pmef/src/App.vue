@@ -1,9 +1,13 @@
 <template>
-  <body>
-    <p class="bg-red-500">Test</p>
-    <button class="rounded-full bg-green-700">Button</button>
-  </body>
+  <div>
+    <NavbarVue />
+  </div>
 </template>
+
+<script setup>
+import NavbarVue from "./components/Navbar.vue";
+document.title = 'PME'
+</script>
 
 <style>
 </style>
