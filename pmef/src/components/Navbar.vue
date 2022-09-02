@@ -2,7 +2,7 @@
   <div>
     <nav>
         <!-- Desktop Menu -->
-        <div class="border-b-2 border-lime-700">
+        <div class="border-b-2 border-lime-700" :class="{ 'border-none': !showMobileMenu }">
             <div class="max-w-7xl mx-auto">
                 <div class="flex justify-between">
                     <!-- menu -->
@@ -20,8 +20,8 @@
                             <a href="/" class="py-0 px-4 hover:text-green-500">Contact</a>
                         </div>
                     </div>
-                    <!-- login -->
-                    <div class="hidden md:flex items-center px-2 space-x-2">
+                    <!-- login / register -->
+                    <div class="flex items-center px-2 space-x-2" :class="{ hidden: !showMobileMenu }">
                         <a href="/" class="py-2 px-4 rounded-full text-black font-bold border-2 border-green-500 hover:bg-green-500">Login</a>
                         <a href="/" class="py-2 px-4 rounded-full text-black font-bold border-2 border-red-500 hover:bg-red-500">Register</a>
                     </div>
@@ -38,10 +38,14 @@
             </div>
         </div>
         <!-- Mobile Menu -->
-        <div class="md:hidden" :class="{ hidden: showMobileMenu }">
+        <div class="md:hidden border-b-2 border-lime-700" :class="{ hidden: showMobileMenu }">
             <a href="/" class="block py-2 px-4 hover:bg-green-500">Home</a>
             <a href="/" class="block py-2 px-4 hover:bg-green-500">About</a>
             <a href="/" class="block py-2 px-4 hover:bg-green-500">Contact</a>
+            <div class="py-4 space-x-2">
+                <a href="/" class="py-2 px-4 rounded-full text-black font-bold border-2 border-green-500 hover:bg-green-500">Login</a>
+                <a href="/" class="py-2 px-4 rounded-full text-black font-bold border-2 border-red-500 hover:bg-red-500">Register</a>
+            </div>
         </div>
     </nav>
     <div class="p-8 text-2xl font-extrabold text-center">Content</div>
