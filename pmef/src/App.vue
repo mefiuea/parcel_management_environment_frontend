@@ -1,11 +1,13 @@
 <template>
   <div>
-    <NavbarVue />
+    <Navbar />
+    <MainPage />
   </div>
 </template>
 
 <script setup>
-import NavbarVue from "./components/Navbar.vue";
+import Navbar from "./components/Navbar.vue"
+import MainPage from "./components/MainPage.vue"
 document.title = 'PME'
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav>
+    <nav class="pb-4">
         <!-- Desktop Menu -->
         <div class="border-b-2 border-lime-700" :class="{ 'border-none': !showMobileMenu }">
             <div class="max-w-7xl mx-auto">
@@ -47,7 +47,6 @@
             </div>
         </div>
     </nav>
-    <div class="p-8 text-2xl font-extrabold text-center">Content</div>
   </div>
 </template>
 
