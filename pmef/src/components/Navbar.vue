@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="pb-4">
+    <nav class="pb-10">
         <!-- Desktop Menu -->
         <div class="border-b-2 border-lime-700" :class="{ 'border-none': !showMobileMenu }">
             <div class="max-w-7xl mx-auto">
@@ -9,7 +9,7 @@
                     <div class="flex space-x-4">
                         <!-- logo -->
                             <a href="" class="flex items-center py-1">
-                                <img src="../assets/pme_icon.png" class="" width="50px" height="50px" alt="Logo">
+                                <img src="../assets/images/pme_icon.png" class="" width="50px" height="50px" alt="Logo">
                                 <p class="pme-logo px-4 text-lime-700 hidden sm:flex">Parcel Management Environment</p>
                                 <p class="pme-logo px-4 text-lime-700 hidden ss:flex sm:hidden">PME</p>
                             </a>
