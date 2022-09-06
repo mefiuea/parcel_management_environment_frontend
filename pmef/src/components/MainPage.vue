@@ -1,16 +1,21 @@
 <template>
-  <div>
+  <!-- root -->
+  <div class="">
+    <!-- card about -->
     <div
       class="
         max-w-screen-lg
+        mx-auto
         bg-white
         rounded-xl
         border-lime-700 border
         overflow-hidden
-        mx-4
+        mb-4
+        hover:bg-green-100
+        duration-500
       "
     >
-      <div class="md:flex">
+      <div class="md:flex items-center">
         <div class="md:shrink-0 px-4 py-4">
           <img
             class="h-48 w-full object-contain md:h-full md:w-48"
@@ -35,6 +40,140 @@
         </div>
       </div>
     </div>
+    <!-- card step1 -->
+    <div
+      class="
+        max-w-screen-lg
+        mx-auto
+        bg-white
+        rounded-xl
+        border-lime-700 border
+        overflow-hidden
+        mb-4
+        hover:bg-green-100
+        duration-500
+      "
+    >
+      <div class="md:flex items-center">
+        <div class="p-8 grow">
+          <div>
+            <div
+              class="uppercase tracking-wide text-4xl font-semibold text-center"
+            >
+              Create a package
+            </div>
+            <div class="mt-4 text-center">
+              Gather the things you want to pack, place them inside box and
+              close it.
+            </div>
+          </div>
+        </div>
+        <div class="md:shrink-0 px-4 py-4">
+          <div class="text-center font-mono font-bold text-2xl">Step 1</div>
+          <img
+            class="h-48 w-full object-contain md:h-full md:w-48"
+            src="../assets/images/step1_v2.png"
+            alt="Man looking at item at a store"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- card step2 -->
+    <div
+      class="
+        max-w-screen-lg
+        mx-auto
+        bg-white
+        rounded-xl
+        border-lime-700 border
+        overflow-hidden
+        mb-4
+        hover:bg-green-100
+        duration-500
+      "
+    >
+      <div class="md:flex items-center">
+        <div class="md:shrink-0 px-4 py-4">
+          <div class="text-center font-mono font-bold text-2xl">Step 2</div>
+          <img
+            class="h-48 w-full object-contain md:h-full md:w-48"
+            src="../assets/images/step1_v2.png"
+            alt="Man looking at item at a store"
+          />
+        </div>
+        <div class="p-8 grow">
+          <div>
+            <div
+              class="uppercase tracking-wide text-4xl font-semibold text-center"
+            >
+              Log in to your account
+            </div>
+            <div class="mt-4 text-center">
+              If you do not have an account yet, register on the site. Just
+              enter your email and password and confirm your account by clicking
+              on the link sent by email.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- card step3 -->
+    <div
+      class="
+        max-w-screen-lg
+        mx-auto
+        bg-white
+        rounded-xl
+        border-lime-700 border
+        overflow-hidden
+        mb-4
+        hover:bg-green-100
+        duration-500
+      "
+    >
+      <div class="md:flex items-center">
+        <div class="p-8 grow">
+          <div>
+            <div
+              class="uppercase tracking-wide text-4xl font-semibold text-center"
+            >
+              Click
+              <a
+                href="/"
+                class="
+                  duration-300
+                  py-2
+                  px-4
+                  rounded-full
+                  text-black
+                  border-2 border-green-500
+                  hover:bg-green-500
+                  text-xs
+                  align-middle
+                "
+                >Add package</a
+              >
+              in the menu
+            </div>
+            <div class="mt-4 text-center">
+              Fill out the form with information about the package (e.g. package
+              name or package contents). Save this information using the button.
+              At this point, the package will be saved to the system and QR code
+              will be generated, which you can download and print.
+            </div>
+          </div>
+        </div>
+        <div class="md:shrink-0 px-4 py-4">
+          <div class="text-center font-mono font-bold text-2xl">Step 3</div>
+          <img
+            class="h-48 w-full object-contain md:h-full md:w-48"
+            src="../assets/images/step1_v2.png"
+            alt="Man looking at item at a store"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- root end -->
   </div>
 </template>
 
