@@ -1,14 +1,24 @@
 <template>
   <div>
-    <Navbar />
-    <MainPage />
+    <Navbar/>
+    <MainPage/>
   </div>
 </template>
 
-<script setup>
+<script>
 import Navbar from "./components/Navbar.vue"
 import MainPage from "./components/MainPage.vue"
-document.title = 'PME'
+
+export default {
+  components: {
+    Navbar,
+    MainPage,
+  },
+
+  setup() {
+
+  },
+}
 </script>
 
 <style>
