@@ -51,7 +51,7 @@
               mb-4
               hover:bg-gray-100
             "
-            name="password"
+            name="password1"
             placeholder="Password"
           />
           <input
@@ -65,7 +65,7 @@
               mb-4
               hover:bg-gray-100
             "
-            name="confirm_password"
+            name="password2"
             placeholder="Confirm Password"
           />
 
