@@ -235,8 +235,8 @@
             <div class="mt-4 text-center">
               Now you can put your package away. Thanks to the QR code, you
               always have access to information about the package (its
-              contents). All you have to do is scan code with your phone and
-              get information about package.
+              contents). All you have to do is scan code with your phone and get
+              information about package.
             </div>
           </div>
         </div>
@@ -294,3 +294,6 @@ export default {
   // },
 };
 </script>
+
+<style>
+</style>
