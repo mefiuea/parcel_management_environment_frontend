@@ -20,7 +20,7 @@
           <img
             class="h-48 w-full object-contain md:h-full md:w-48"
             src="../assets/images/question_circle_icon.png"
-            alt="Man looking at item at a store"
+            alt="Question mark image"
           />
         </div>
         <div class="p-8 grow">
@@ -72,8 +72,8 @@
           <div class="text-center font-mono font-bold text-2xl">Step 1</div>
           <img
             class="h-48 w-full object-contain md:h-full md:w-48"
-            src="../assets/images/step1_v2.png"
-            alt="Man looking at item at a store"
+            src="../assets/images/step1.png"
+            alt="Open box image"
           />
         </div>
       </div>
@@ -97,8 +97,8 @@
           <div class="text-center font-mono font-bold text-2xl">Step 2</div>
           <img
             class="h-48 w-full object-contain md:h-full md:w-48"
-            src="../assets/images/step1_v2.png"
-            alt="Man looking at item at a store"
+            src="../assets/images/step2.png"
+            alt="Box with padlock image"
           />
         </div>
         <div class="p-8 grow">
@@ -158,7 +158,7 @@
             <div class="mt-4 text-center">
               Fill out the form with information about the package (e.g. package
               name or package contents). Save this information using the button.
-              At this point, the package will be saved to the system and QR code
+              At this point, package will be saved to the system and QR code
               will be generated, which you can download and print.
             </div>
           </div>
@@ -167,8 +167,85 @@
           <div class="text-center font-mono font-bold text-2xl">Step 3</div>
           <img
             class="h-48 w-full object-contain md:h-full md:w-48"
-            src="../assets/images/step1_v2.png"
-            alt="Man looking at item at a store"
+            src="../assets/images/step3.png"
+            alt="Printer image"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- card step4 -->
+    <div
+      class="
+        max-w-screen-lg
+        mx-auto
+        bg-white
+        rounded-xl
+        border-lime-700 border
+        overflow-hidden
+        mb-4
+        hover:bg-green-100
+        duration-500
+      "
+    >
+      <div class="md:flex items-center">
+        <div class="md:shrink-0 px-4 py-4">
+          <div class="text-center font-mono font-bold text-2xl">Step 4</div>
+          <img
+            class="h-48 w-full object-contain md:h-full md:w-48"
+            src="../assets/images/step4.png"
+            alt="Box with QR code image"
+          />
+        </div>
+        <div class="p-8 grow">
+          <div>
+            <div
+              class="uppercase tracking-wide text-4xl font-semibold text-center"
+            >
+              QR code
+            </div>
+            <div class="mt-4 text-center">
+              Now you can glue printed QR code to your package.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- card step5 -->
+    <div
+      class="
+        max-w-screen-lg
+        mx-auto
+        bg-white
+        rounded-xl
+        border-lime-700 border
+        overflow-hidden
+        mb-20
+        hover:bg-green-100
+        duration-500
+      "
+    >
+      <div class="md:flex items-center">
+        <div class="p-8 grow">
+          <div>
+            <div
+              class="uppercase tracking-wide text-4xl font-semibold text-center"
+            >
+              Finish
+            </div>
+            <div class="mt-4 text-center">
+              Now you can put your package away. Thanks to the QR code, you
+              always have access to information about the package (its
+              contents). All you have to do is scan code with your phone and
+              get information about package.
+            </div>
+          </div>
+        </div>
+        <div class="md:shrink-0 px-4 py-4">
+          <div class="text-center font-mono font-bold text-2xl">Step 5</div>
+          <img
+            class="h-48 w-full object-contain md:h-full md:w-48"
+            src="../assets/images/step5.png"
+            alt="Truck image"
           />
         </div>
       </div>
