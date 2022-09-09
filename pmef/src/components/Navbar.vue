@@ -11,7 +11,10 @@
             <!-- menu -->
             <div class="flex space-x-4">
               <!-- logo -->
-              <a href="/" class="flex items-center py-1">
+              <router-link
+                :to="{ name: 'MainPage' }"
+                class="flex items-center py-1"
+              >
                 <img
                   src="../assets/images/pme_icon.png"
                   class="max-h-12"
@@ -23,11 +26,11 @@
                 <p class="pme-logo px-4 text-lime-700 hidden ss:flex sm:hidden">
                   PME
                 </p>
-              </a>
+              </router-link>
               <!-- menu -->
               <div class="hidden md:flex items-center px-2">
                 <router-link
-                  to="/"
+                  :to="{ name: 'MainPage' }"
                   class="py-2 px-4 hover:text-green-500 font-bold"
                   >Home</router-link
                 >
@@ -50,7 +53,7 @@
                 >Login</router-link
               >
               <router-link
-                to="/register"
+                :to="{ name: 'RegisterPage' }"
                 class="duration-300 py-2 px-4 rounded-full text-black font-bold border-2 border-red-500 hover:bg-red-500"
                 >Register</router-link
               >
@@ -85,27 +88,27 @@
         class="md:hidden border-b-2 border-lime-700"
         :class="{ hidden: showMobileMenu }"
       >
-        <a
-          href="/"
-          class="duration-300 block py-2 px-4 hover:bg-green-500 font-bold"
-          >Home</a
+        <router-link
+          :to="{ name: 'MainPage' }"
+          class="block mx-4 my-4 hover:text-green-500 font-bold"
+          >Home</router-link
         >
-        <a href="/" class="duration-300 block py-2 px-4 hover:bg-green-500"
-          >About</a
+        <router-link to="/" class="block mx-4 my-4 hover:text-green-500"
+          >About</router-link
         >
-        <a href="/" class="duration-300 block py-2 px-4 hover:bg-green-500"
-          >Contact</a
+        <router-link to="/" class="block mx-4 my-4 hover:text-green-500"
+          >Contact</router-link
         >
         <div class="py-4 space-x-2 mx-4">
-          <a
-            href="/"
+          <router-link
+            to="/"
             class="duration-300 py-2 px-4 rounded-full text-black font-bold border-2 border-green-500 hover:bg-green-500"
-            >Login</a
+            >Login</router-link
           >
-          <a
-            href="/register"
+          <router-link
+            :to="{ name: 'RegisterPage' }"
             class="duration-300 py-2 px-4 rounded-full text-black font-bold border-2 border-red-500 hover:bg-red-500"
-            >Register</a
+            >Register</router-link
           >
         </div>
       </div>
