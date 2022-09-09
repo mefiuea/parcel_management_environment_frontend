@@ -94,10 +94,7 @@
 
           <div class="text-center text-sm text-grey-dark mt-4">
             Already have an account?
-            <a
-              class="border-b border-green-500 text-green-500"
-              href="/"
-            >
+            <a class="border-b border-green-500 text-green-500" href="/">
               Log in</a
             >.
           </div>

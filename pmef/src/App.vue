@@ -18,7 +18,9 @@ export default {
     RegisterPage,
   },
 
-  setup() {},
+  setup() {
+
+  },
 };
 </script>
 
