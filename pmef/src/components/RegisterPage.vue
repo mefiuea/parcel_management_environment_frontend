@@ -1,70 +1,30 @@
 <template>
   <!-- root -->
   <div>
-    <div class="min-h-screen flex flex-col">
+    <div class="min-h-0 flex flex-col">
       <div
-        class="
-          container
-          max-w-sm
-          mx-auto
-          flex-1 flex flex-col
-          items-center
-          justify-center
-          px-2
-        "
+        class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2"
       >
         <div
-          class="
-            bg-white
-            px-6
-            py-8
-            border-lime-700 border
-            rounded-xl
-            text-black
-            w-full
-          "
+          class="bg-white px-6 py-8 border-lime-700 border rounded-xl text-black w-full"
         >
           <h1 class="mb-8 text-3xl text-center">Sign up</h1>
           <input
             type="text"
-            class="
-              block
-              border border-lime-700
-              w-full
-              p-3
-              rounded-xl
-              mb-4
-              hover:bg-gray-100
-            "
+            class="block border border-lime-700 w-full p-3 rounded-xl mb-4 hover:bg-gray-100"
             name="email"
             placeholder="Email"
           />
 
           <input
             type="password"
-            class="
-              block
-              border border-lime-700
-              w-full
-              p-3
-              rounded-xl
-              mb-4
-              hover:bg-gray-100
-            "
+            class="block border border-lime-700 w-full p-3 rounded-xl mb-4 hover:bg-gray-100"
             name="password1"
             placeholder="Password"
           />
           <input
             type="password"
-            class="
-              block
-              border border-lime-700
-              w-full
-              p-3
-              rounded-xl
-              mb-4
-              hover:bg-gray-100
-            "
+            class="block border border-lime-700 w-full p-3 rounded-xl mb-4 hover:bg-gray-100"
             name="password2"
             placeholder="Confirm Password"
           />
@@ -73,21 +33,7 @@
             type="submit"
             name="create_account_button"
             value="clicked"
-            class="
-              w-full
-              text-center
-              hover:bg-green-dark
-              focus:outline-none
-              my-1
-              duration-300
-              py-2
-              px-4
-              rounded-full
-              text-black
-              font-bold
-              border-2 border-red-500
-              hover:bg-red-500
-            "
+            class="w-full text-center hover:bg-green-dark focus:outline-none my-1 duration-300 py-2 px-4 rounded-full text-black font-bold border-2 border-red-500 hover:bg-red-500"
           >
             Create Account
           </button>
@@ -115,5 +61,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>

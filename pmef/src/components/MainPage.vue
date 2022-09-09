@@ -1,6 +1,6 @@
 <template>
   <!-- root -->
-  <div class="">
+  <div class="px-3">
     <!-- card about -->
     <div
       class="max-w-screen-lg mx-auto bg-white rounded-xl border-lime-700 border overflow-hidden mb-4 hover:bg-green-100 duration-500"
