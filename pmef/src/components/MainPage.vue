@@ -3,17 +3,7 @@
   <div class="">
     <!-- card about -->
     <div
-      class="
-        max-w-screen-lg
-        mx-auto
-        bg-white
-        rounded-xl
-        border-lime-700 border
-        overflow-hidden
-        mb-4
-        hover:bg-green-100
-        duration-500
-      "
+      class="max-w-screen-lg mx-auto bg-white rounded-xl border-lime-700 border overflow-hidden mb-4 hover:bg-green-100 duration-500"
     >
       <div class="md:flex items-center">
         <div class="md:shrink-0 px-4 py-4">
@@ -42,17 +32,7 @@
     </div>
     <!-- card step1 -->
     <div
-      class="
-        max-w-screen-lg
-        mx-auto
-        bg-white
-        rounded-xl
-        border-lime-700 border
-        overflow-hidden
-        mb-4
-        hover:bg-green-100
-        duration-500
-      "
+      class="max-w-screen-lg mx-auto bg-white rounded-xl border-lime-700 border overflow-hidden mb-4 hover:bg-green-100 duration-500"
     >
       <div class="md:flex items-center">
         <div class="p-8 grow">
@@ -80,17 +60,7 @@
     </div>
     <!-- card step2 -->
     <div
-      class="
-        max-w-screen-lg
-        mx-auto
-        bg-white
-        rounded-xl
-        border-lime-700 border
-        overflow-hidden
-        mb-4
-        hover:bg-green-100
-        duration-500
-      "
+      class="max-w-screen-lg mx-auto bg-white rounded-xl border-lime-700 border overflow-hidden mb-4 hover:bg-green-100 duration-500"
     >
       <div class="md:flex items-center">
         <div class="md:shrink-0 px-4 py-4">
@@ -119,17 +89,7 @@
     </div>
     <!-- card step3 -->
     <div
-      class="
-        max-w-screen-lg
-        mx-auto
-        bg-white
-        rounded-xl
-        border-lime-700 border
-        overflow-hidden
-        mb-4
-        hover:bg-green-100
-        duration-500
-      "
+      class="max-w-screen-lg mx-auto bg-white rounded-xl border-lime-700 border overflow-hidden mb-4 hover:bg-green-100 duration-500"
     >
       <div class="md:flex items-center">
         <div class="p-8 grow">
@@ -140,17 +100,7 @@
               Click
               <a
                 href="/"
-                class="
-                  duration-300
-                  py-2
-                  px-4
-                  rounded-full
-                  text-black
-                  border-2 border-green-500
-                  hover:bg-green-500
-                  text-xs
-                  align-middle
-                "
+                class="duration-300 py-2 px-4 rounded-full text-black border-2 border-green-500 hover:bg-green-500 text-xs align-middle"
                 >Add package</a
               >
               in the menu
@@ -175,17 +125,7 @@
     </div>
     <!-- card step4 -->
     <div
-      class="
-        max-w-screen-lg
-        mx-auto
-        bg-white
-        rounded-xl
-        border-lime-700 border
-        overflow-hidden
-        mb-4
-        hover:bg-green-100
-        duration-500
-      "
+      class="max-w-screen-lg mx-auto bg-white rounded-xl border-lime-700 border overflow-hidden mb-4 hover:bg-green-100 duration-500"
     >
       <div class="md:flex items-center">
         <div class="md:shrink-0 px-4 py-4">
@@ -212,17 +152,7 @@
     </div>
     <!-- card step5 -->
     <div
-      class="
-        max-w-screen-lg
-        mx-auto
-        bg-white
-        rounded-xl
-        border-lime-700 border
-        overflow-hidden
-        mb-20
-        hover:bg-green-100
-        duration-500
-      "
+      class="max-w-screen-lg mx-auto bg-white rounded-xl border-lime-700 border overflow-hidden mb-20 hover:bg-green-100 duration-500"
     >
       <div class="md:flex items-center">
         <div class="p-8 grow">
@@ -295,5 +225,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>

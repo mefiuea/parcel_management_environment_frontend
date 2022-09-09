@@ -1,8 +1,9 @@
 <template>
   <div>
     <Navbar />
-    <MainPage />
-    <RegisterPage />
+    <router-view></router-view>
+    <!-- <MainPage />
+    <RegisterPage /> -->
   </div>
 </template>
 
@@ -18,11 +19,8 @@ export default {
     RegisterPage,
   },
 
-  setup() {
-
-  },
+  setup() {},
 };
 </script>
 
-<style>
-</style>
+<style></style>
