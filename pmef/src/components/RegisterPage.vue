@@ -34,6 +34,7 @@
             name="create_account_button"
             value="clicked"
             class="w-full text-center hover:bg-green-dark focus:outline-none my-1 duration-300 py-2 px-4 rounded-full text-black font-bold border-2 border-red-500 hover:bg-red-500"
+            @click="getDataFromApi"
           >
             Create Account
           </button>
@@ -53,11 +54,23 @@
 
 <script>
 import { onMounted, onUpdated, ref, toRefs } from "vue";
+import { getAPI } from "../axios/axios-api.js";
 
 export default {
   props: {},
 
-  setup(props) {},
+  setup(props) {
+    const APIData = ref([]);
+
+    function getDataFromApi() {
+      console.log("test API");
+    }
+
+    return {
+      APIData,
+      getDataFromApi,
+    };
+  },
 };
 </script>
 
