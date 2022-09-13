@@ -9,14 +9,14 @@
 
 <script>
 import Navbar from "./components/Navbar.vue";
-import MainPage from "./components/MainPage.vue";
-import RegisterPage from "./components/RegisterPage.vue";
+// import MainPage from "./components/MainPage.vue";
+// import RegisterPage from "./components/RegisterPage.vue";
 
 export default {
   components: {
     Navbar,
-    MainPage,
-    RegisterPage,
+    // MainPage,
+    // RegisterPage,
   },
 
   setup() {},

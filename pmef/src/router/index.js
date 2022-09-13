@@ -3,8 +3,8 @@ import MainPage from "../components/MainPage.vue";
 import RegisterPage from "../components/RegisterPage.vue";
 
 const routes = [
-  { path: "/", name: "MainPage", component: MainPage },
-  { path: "/register", name: "RegisterPage", component: RegisterPage },
+  { path: "/", name: "MP", component: MainPage },
+  { path: "/register", name: "RP", component: RegisterPage },
 ];
 
 const router = createRouter({
