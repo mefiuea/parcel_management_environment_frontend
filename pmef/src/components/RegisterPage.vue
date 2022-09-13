@@ -10,65 +10,100 @@
         >
           <h1 class="mb-8 text-3xl text-center">Sign up</h1>
           <form action="http://localhost:5173/" method="get" @submit.prevent>
-            <p v-if="APIData.email" class="text-sm text-red-500">
-              Email: {{ APIData.email[0] }}
-            </p>
+            <div v-if="APIData.email" class="text-sm text-red-500">
+              Email:
+              <li v-for="item in APIData.email" v-bind:key="item">
+                {{ item }}
+              </li>
+            </div>
             <input
               type="text"
-              class="block border border-lime-700 w-full p-3 rounded-xl mb-4 hover:bg-gray-100"
+              class="block border border-lime-700 w-full p-3 rounded-xl mb-2 mt-2 hover:bg-gray-100"
               name="email"
               placeholder="Email (required)"
               v-model="submitForm.email"
             />
 
-            <p v-if="APIData.password1" class="text-sm text-red-500">
-              Password: {{ APIData.password1[0] }}
-            </p>
-            <input
-              type="password"
-              class="block border border-lime-700 w-full p-3 rounded-xl mb-4 hover:bg-gray-100"
-              name="password1"
-              placeholder="Password (required)"
-            />
+            <div
+              :class="{
+                'border-2': APIData.non_field_errors,
+                'border-dashed': APIData.non_field_errors,
+                'border-red-500': APIData.non_field_errors,
+              }"
+            >
+              <!-- class="border-2 border-dashed border-red-500" -->
+              <div v-if="APIData.password1" class="text-sm text-red-500">
+                Password:
+                <li v-for="item in APIData.password1" v-bind:key="item">
+                  {{ item }}
+                </li>
+              </div>
+              <div v-if="APIData.non_field_errors" class="text-sm text-red-500">
+                {{ APIData.non_field_errors[0] }}
+              </div>
+              <input
+                type="password"
+                class="block border border-lime-700 w-full p-3 rounded-xl mb-2 mt-2 hover:bg-gray-100"
+                name="password1"
+                placeholder="Password (required)"
+                v-model="submitForm.password1"
+              />
 
-            <p v-if="APIData.password2" class="text-sm text-red-500">
-              Confirm password: {{ APIData.password2[0] }}
-            </p>
-            <input
-              type="password"
-              class="block border border-lime-700 w-full p-3 rounded-xl mb-4 hover:bg-gray-100"
-              name="password2"
-              placeholder="Confirm password (required)"
-            />
+              <div v-if="APIData.password2" class="text-sm text-red-500">
+                Confirm password:
+                <li v-for="item in APIData.password2" v-bind:key="item">
+                  {{ item }}
+                </li>
+              </div>
+              <input
+                type="password"
+                class="block border border-lime-700 w-full p-3 rounded-xl mb-2 mt-2 hover:bg-gray-100"
+                name="password2"
+                placeholder="Confirm password (required)"
+                v-model="submitForm.password2"
+              />
+            </div>
 
-            <p v-if="APIData.user_name" class="text-sm text-red-500">
-              User name: {{ APIData.user_name[0] }}
-            </p>
+            <div v-if="APIData.user_name" class="text-sm text-red-500">
+              User name:
+              <li v-for="item in APIData.user_name" v-bind:key="item">
+                {{ item }}
+              </li>
+            </div>
             <input
               type="text"
-              class="block border border-lime-700 w-full p-3 rounded-xl mb-4 hover:bg-gray-100"
+              class="block border border-lime-700 w-full p-3 rounded-xl mb-2 mt-2 hover:bg-gray-100"
               name="user_name"
               placeholder="User name"
+              v-model="submitForm.user_name"
             />
 
-            <p v-if="APIData.first_name" class="text-sm text-red-500">
-              First name: {{ APIData.first_name[0] }}
-            </p>
+            <div v-if="APIData.first_name" class="text-sm text-red-500">
+              First name:
+              <li v-for="item in APIData.first_name" v-bind:key="item">
+                {{ item }}
+              </li>
+            </div>
             <input
               type="text"
-              class="block border border-lime-700 w-full p-3 rounded-xl mb-4 hover:bg-gray-100"
+              class="block border border-lime-700 w-full p-3 rounded-xl mb-2 mt-2 hover:bg-gray-100"
               name="first_name"
               placeholder="First name"
+              v-model="submitForm.first_name"
             />
 
-            <p v-if="APIData.last_name" class="text-sm text-red-500">
-              Last name: {{ APIData.last_name[0] }}
-            </p>
+            <div v-if="APIData.last_name" class="text-sm text-red-500">
+              Last name:
+              <li v-for="item in APIData.last_name" v-bind:key="item">
+                {{ item }}
+              </li>
+            </div>
             <input
               type="text"
-              class="block border border-lime-700 w-full p-3 rounded-xl mb-4 hover:bg-gray-100"
+              class="block border border-lime-700 w-full p-3 rounded-xl mb-2 mt-2 hover:bg-gray-100"
               name="last_name"
               placeholder="Last name"
+              v-model="submitForm.last_name"
             />
 
             <button
@@ -91,9 +126,7 @@
         </div>
         Odpowiedź:
         <div>
-          {{ APIData }}
-          email:
-          {{ submitForm }}
+          {{ APIDataSuccess }}
         </div>
       </div>
     </div>
@@ -110,6 +143,7 @@ export default {
 
   setup(props) {
     const APIData = ref([]);
+    const APIDataSuccess = ref('pusto');
     const submitForm = ref({
       email: "",
       password1: "",
@@ -122,11 +156,11 @@ export default {
     function getDataFromApi() {
       console.log("test API");
       getAPI
-        .post("/api/v1/dj-rest-auth/registration/", submitForm)
+        .post("/api/v1/dj-rest-auth/registration/", submitForm.value)
         .then((response) => {
           console.log("Registration API has recived data");
-          APIData.value = response.data;
-          console.log("Data: ", APIData.value);
+          APIDataSuccess.value = response.data;
+          console.log("Data: ", APIDataSuccess.value);
           console.log(`Status code: ${response.status}`);
         })
         .catch((err) => {
@@ -140,6 +174,7 @@ export default {
 
     return {
       APIData,
+      APIDataSuccess,
       getDataFromApi,
       submitForm,
     };
