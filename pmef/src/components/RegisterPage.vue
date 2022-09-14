@@ -148,8 +148,11 @@
 
           <div class="text-center text-sm text-grey-dark mt-4">
             Already have an account?
-            <a class="border-b border-green-500 text-green-500" href="/">
-              Log in</a
+            <router-link
+              :to="{ name: 'MainPage' }"
+              class="border-b border-green-500 text-green-500"
+            >
+              Log in</router-link
             >.
           </div>
         </div>
