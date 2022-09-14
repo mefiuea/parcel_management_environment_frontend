@@ -193,7 +193,6 @@ export default {
   setup(props) {
     // variables
     const counter = ref(2022);
-    const testFunction = test();
 
     // functions
     function increment() {
@@ -206,15 +205,10 @@ export default {
       console.log(`Counter value = ${counter.value}.`);
     }
 
-    function test() {
-      console.log("TEST");
-    }
-
     return {
       counter,
       increment,
       decrement,
-      testFunction,
     };
   },
 

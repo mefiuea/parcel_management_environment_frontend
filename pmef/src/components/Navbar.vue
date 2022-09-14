@@ -12,7 +12,7 @@
             <div class="flex space-x-4">
               <!-- logo -->
               <router-link
-                :to="{ name: 'MP' }"
+                :to="{ name: 'MainPage' }"
                 class="flex items-center py-1"
               >
                 <img
@@ -30,7 +30,7 @@
               <!-- menu -->
               <div class="hidden md:flex items-center px-2">
                 <router-link
-                  :to="{ name: 'MP' }"
+                  :to="{ name: 'MainPage' }"
                   class="py-2 px-4 hover:text-green-500 font-bold"
                   >Home</router-link
                 >
@@ -53,7 +53,7 @@
                 >Login</router-link
               >
               <router-link
-                :to="{ name: 'RP' }"
+                :to="{ name: 'RegisterPage' }"
                 class="duration-300 py-2 px-4 rounded-full text-black font-bold border-2 border-red-500 hover:bg-red-500"
                 >Register</router-link
               >
@@ -89,7 +89,7 @@
         :class="{ hidden: showMobileMenu }"
       >
         <router-link
-          :to="{ name: 'MP' }"
+          :to="{ name: 'MainPage' }"
           class="block mx-4 my-4 hover:text-green-500 font-bold"
           >Home</router-link
         >
@@ -106,7 +106,7 @@
             >Login</router-link
           >
           <router-link
-            :to="{ name: 'RP' }"
+            :to="{ name: 'RegisterPage' }"
             class="duration-300 py-2 px-4 rounded-full text-black font-bold border-2 border-red-500 hover:bg-red-500"
             >Register</router-link
           >

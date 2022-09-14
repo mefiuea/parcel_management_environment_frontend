@@ -1,7 +1,7 @@
 <template>
   <!-- root -->
   <div>
-    <div class="min-h-0 flex flex-col">
+    <div class="min-h-0 flex flex-col mb-10">
       <div
         class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2"
       >
@@ -143,6 +143,7 @@
                 </div>
               </div>
             </div>
+            <div></div>
           </form>
 
           <div class="text-center text-sm text-grey-dark mt-4">
@@ -185,18 +186,23 @@ export default {
       getAPI
         .post("/api/v1/dj-rest-auth/registration/", submitForm.value)
         .then((response) => {
-          loading.value = true;
           APIDataSuccess.value = response.data;
           router.push({
-            name: "MP",
+            name: "RegisterSuccess",
           });
         })
         .catch((err) => {
           loading.value = false;
           console.log("Error response status:", err.response.status);
+          if (err.response.status === 0) {
+            console.log("Network error - redirection");
+            router.push({
+              name: "RegisterError",
+            });
+          }
           console.log("Error message:", err.message);
           console.log("Error code:", err.code);
-          console.log("Error:", err.response.data);
+          console.log("Error data:", err.response.data);
           APIDataError.value = err.response.data;
         });
     }
