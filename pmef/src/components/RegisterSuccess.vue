@@ -20,7 +20,7 @@
               A message has been sent to your email. It contains a link to
               activate your account. Thank you for registering. You can go to
               <router-link
-                :to="{ name: 'MainPage' }"
+                :to="{ name: 'LoginPage' }"
                 class="border-b border-green-500 text-green-500"
               >
                 log in</router-link

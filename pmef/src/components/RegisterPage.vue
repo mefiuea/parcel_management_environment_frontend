@@ -149,7 +149,7 @@
           <div class="text-center text-sm text-grey-dark mt-4">
             Already have an account?
             <router-link
-              :to="{ name: 'MainPage' }"
+              :to="{ name: 'LoginPage' }"
               class="border-b border-green-500 text-green-500"
             >
               Log in</router-link
@@ -163,7 +163,7 @@
 </template>
 
 <script>
-import { onMounted, onUpdated, ref, toRefs } from "vue";
+import { ref } from "vue";
 import { getAPI } from "../axios/axios-api.js";
 import { useRouter } from "vue-router";
 
@@ -200,7 +200,7 @@ export default {
           if (err.response.status === 0) {
             console.log("Network error - redirection");
             router.push({
-              name: "RegisterError",
+              name: "ServerError",
             });
           }
           console.log("Error message:", err.message);

@@ -48,7 +48,7 @@
               :class="{ hidden: !showMobileMenu }"
             >
               <router-link
-                to="/"
+                :to="{ name: 'LoginPage' }"
                 class="duration-300 py-2 px-4 rounded-full text-black font-bold border-2 border-green-500 hover:bg-green-500"
                 >Login</router-link
               >
@@ -101,7 +101,7 @@
         >
         <div class="py-4 space-x-2 mx-4">
           <router-link
-            to="/"
+            :to="{ name: 'LoginPage' }"
             class="duration-300 py-2 px-4 rounded-full text-black font-bold border-2 border-green-500 hover:bg-green-500"
             >Login</router-link
           >
