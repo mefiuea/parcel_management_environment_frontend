@@ -6,6 +6,6 @@ import { createPinia } from "pinia";
 import "./index.css";
 import "./assets/styles/main.css";
 
-const pinia = createPinia()
+const pinia = createPinia();
 
-createApp(App).use(router, pinia).mount("#app");
+createApp(App).use(router).use(pinia).mount("#app");

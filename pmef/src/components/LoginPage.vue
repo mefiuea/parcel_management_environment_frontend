@@ -10,9 +10,15 @@
         >
           <h1 class="mb-8 text-3xl text-center">Log in</h1>
           <form action="http://localhost:5173/" method="get" @submit.prevent>
-            <div v-if="APIDataError.non_field_errors" class="text-sm text-red-500">
+            <div
+              v-if="APIDataError.non_field_errors"
+              class="text-sm text-red-500"
+            >
               Errors:
-              <li v-for="item in APIDataError.non_field_errors" v-bind:key="item">
+              <li
+                v-for="item in APIDataError.non_field_errors"
+                v-bind:key="item"
+              >
                 {{ item }}
               </li>
             </div>
@@ -54,6 +60,15 @@
             >
               Log in
             </button>
+
+            <button
+              name="create_account_button"
+              value="clicked"
+              class="w-full text-center hover:bg-green-dark focus:outline-none my-1 duration-300 py-2 px-4 rounded-full text-black font-bold border-2 border-green-500 hover:bg-green-500"
+              @click="show()"
+            >
+              Show data
+            </button>
           </form>
         </div>
         APIDataSuccess: {{ APIDataSuccess }}
@@ -69,15 +84,19 @@
 import { ref } from "vue";
 import { getAPI } from "../axios/axios-api.js";
 import { useRouter } from "vue-router";
+import { useTokenStore } from "../pinia/store.js";
 
 export default {
   setup() {
+    const router = useRouter();
+    const tokenStore = useTokenStore();
     const APIDataError = ref("");
     const APIDataSuccess = ref("");
     const submitForm = ref({
       email: "",
       password: "",
     });
+    let token = ref("test");
 
     function getDataFromApi() {
       getAPI
@@ -85,14 +104,19 @@ export default {
         .then((response) => {
           APIDataSuccess.value = response.data;
           console.log("DATA success: ", APIDataSuccess.value);
-        //   router.push({
-        //     name: "MainPage",
-        //   });
+          // pinia - store data (token) in session
+          token = APIDataSuccess.value.key;
+          tokenStore.setToken(token, submitForm.value.email);
+          //   router.push({
+          //     name: "MainPage",
+          //   });
         })
         .catch((err) => {
+          tokenStore.removeToken();
           console.log("Error response status:", err.response.status);
           if (err.response.status === 0) {
             console.log("Network error - redirection");
+            tokenStore.removeToken();
             router.push({
               name: "ServerError",
             });
@@ -104,11 +128,20 @@ export default {
         });
     }
 
+    function show() {
+      console.log("show token");
+      token = APIDataSuccess.value.key;
+      console.log("token: ", token, "typ: ", typeof token);
+    }
+
     return {
       APIDataError,
       APIDataSuccess,
       getDataFromApi,
       submitForm,
+      tokenStore,
+      token,
+      show,
     };
   },
 };
