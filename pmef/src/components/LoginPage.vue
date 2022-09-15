@@ -60,20 +60,8 @@
             >
               Log in
             </button>
-
-            <button
-              name="create_account_button"
-              value="clicked"
-              class="w-full text-center hover:bg-green-dark focus:outline-none my-1 duration-300 py-2 px-4 rounded-full text-black font-bold border-2 border-green-500 hover:bg-green-500"
-              @click="show()"
-            >
-              Show data
-            </button>
           </form>
         </div>
-        APIDataSuccess: {{ APIDataSuccess }}
-        <br />
-        APIDataError: {{ APIDataError }}
       </div>
     </div>
     <!-- root end -->
@@ -132,12 +120,6 @@ export default {
         });
     }
 
-    function show() {
-      console.log("show token");
-      token = sessionStorage.getItem("token");
-      console.log("token: ", token, "typ: ", typeof token);
-    }
-
     return {
       APIDataError,
       APIDataSuccess,
@@ -145,7 +127,6 @@ export default {
       submitForm,
       tokenStore,
       token,
-      show,
     };
   },
 };
