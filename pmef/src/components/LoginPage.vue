@@ -96,7 +96,7 @@ export default {
       email: "",
       password: "",
     });
-    let token = ref("test");
+    let token = ref("");
 
     function getDataFromApi() {
       getAPI
@@ -107,9 +107,13 @@ export default {
           // pinia - store data (token) in session
           token = APIDataSuccess.value.key;
           tokenStore.setToken(token, submitForm.value.email);
-          //   router.push({
-          //     name: "MainPage",
-          //   });
+          router
+            .push({
+              name: "MainPage",
+            })
+            .then(() => {
+              router.go();
+            });
         })
         .catch((err) => {
           tokenStore.removeToken();
@@ -130,7 +134,7 @@ export default {
 
     function show() {
       console.log("show token");
-      token = APIDataSuccess.value.key;
+      token = sessionStorage.getItem("token");
       console.log("token: ", token, "typ: ", typeof token);
     }
 

@@ -6,8 +6,8 @@ export const useTokenStore = defineStore("tokenStore", {
     // variables
     return {
       token: useSessionStorage('token', ""),
-      isAuthenticated: false,
-      userEmail: "",
+      isAuthenticated: useSessionStorage('isAuthenticated', false),
+      userEmail: useSessionStorage('user', ""),
     };
   },
 

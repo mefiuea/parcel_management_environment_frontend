@@ -40,6 +40,7 @@
                 <router-link to="/" class="py-0 px-4 hover:text-green-500"
                   >Contact</router-link
                 >
+                <p>{{ user }}</p>
               </div>
             </div>
             <!-- login / register -->
@@ -116,9 +117,23 @@
   </div>
 </template>
 
-<script setup>
+<script>
 import { ref } from "vue";
-const showMobileMenu = ref(true);
+import { useTokenStore } from "../pinia/store.js";
+
+export default {
+  setup() {
+    const tokenStore = useTokenStore();
+    const showMobileMenu = ref(true);
+    const user = ref(sessionStorage.getItem('user'));
+
+    return {
+      tokenStore,
+      showMobileMenu,
+      user,
+    };
+  },
+};
 </script>
 
 <style></style>
