@@ -16,15 +16,15 @@
                 class="flex items-center py-1"
               >
                 <img
-                  src="../assets/images/pme_icon.png"
-                  class="max-h-12"
+                  src="../assets/images/chat_icon.png"
+                  class="max-h-8 ml-2"
                   alt="Logo"
                 />
                 <p class="pme-logo px-4 text-lime-700 hidden sm:flex">
-                  Parcel Management Environment
+                  Cars communicator
                 </p>
                 <p class="pme-logo px-4 text-lime-700 hidden ss:flex sm:hidden">
-                  PME
+                  CC
                 </p>
               </router-link>
               <!-- menu -->
@@ -35,17 +35,17 @@
                   >Home</router-link
                 >
                 <router-link to="/" class="py-0 px-4 hover:text-green-500"
-                  >About</router-link
+                  >Cars</router-link
                 >
-                <router-link to="/" class="py-0 px-4 hover:text-green-500"
-                  >Contact</router-link
+                <router-link to="/" class="py-0 px-4 hover:text-green-500 underline"
+                  >Messages</router-link
                 >
-                <p>{{ user }}</p>
+                <p class="ml-80 font-extralight text-gray-400">user name</p>
               </div>
             </div>
             <!-- login / register -->
             <div
-              class="flex items-center px-2 space-x-2"
+              class="invisible flex items-center px-2 my-2 space-x-2"
               :class="{ hidden: !showMobileMenu }"
             >
               <router-link

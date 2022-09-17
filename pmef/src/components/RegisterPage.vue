@@ -23,6 +23,12 @@
               placeholder="Email (required)"
               v-model="submitForm.email"
             />
+            <input
+              type="text"
+              class="block border border-lime-700 w-full p-3 rounded-xl mb-2 mt-2 hover:bg-gray-100"
+              name="phone"
+              placeholder="Phone number (required)"
+            />
 
             <div
               :class="{
