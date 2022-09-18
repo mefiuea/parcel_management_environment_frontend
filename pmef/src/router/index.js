@@ -8,6 +8,7 @@ import Cars from "../components/Cars.vue";
 import CarsRegistration from "../components/CarsRegistration.vue";
 import CarsRegistrationSuccess from "../components/CarsRegistrationSuccess.vue";
 import Messages from "../components/Messages.vue";
+import MessagesDetail from "../components/MessagesDetail.vue";
 
 const routes = [
   { path: "/", name: "MainPage", component: MainPage },
@@ -19,6 +20,7 @@ const routes = [
   { path: "/cars-registration", name: "CarsRegistration", component: CarsRegistration },
   { path: "/cars-registration-success", name: "CarsRegistrationSuccess", component: CarsRegistrationSuccess },
   { path: "/messages", name: "Messages", component: Messages },
+  { path: "/messages-detail", name: "MessagesDetail", component: MessagesDetail },
 ];
 
 const router = createRouter({

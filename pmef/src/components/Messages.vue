@@ -31,7 +31,7 @@
           </div>
         </div>
         <!-- ------ -->
-        <div class="bg-green-200 rounded-xl p-4 mb-4">
+        <div class="bg-green-200 rounded-xl p-4 mb-4 hover:scale-105 duration-500">
           <div class="grid grid-cols-2">
             <div class="flex">
               <img
