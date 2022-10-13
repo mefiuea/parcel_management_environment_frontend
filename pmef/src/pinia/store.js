@@ -22,14 +22,30 @@ export const useTokenStore = defineStore("tokenStore", {
   actions: {
     setToken(token, userEmail) {
       // this.token = token;
-      this.token = $cookies.set("token", token);
+      this.token = $cookies.set("token", token, 0, null, null, true, "Strict");
       // this.isAuthenticated = true;
-      this.isAuthenticated = $cookies.set("isAuthenticated", true);
+      this.isAuthenticated = $cookies.set(
+        "isAuthenticated",
+        true,
+        0,
+        null,
+        null,
+        true,
+        "Strict"
+      );
       // this.userEmail = userEmail;
-      this.userEmail = $cookies.set("user", userEmail);
+      this.userEmail = $cookies.set(
+        "user",
+        userEmail,
+        0,
+        null,
+        null,
+        true,
+        "Strict"
+      );
     },
     removeToken() {
-      this.token = "";
+      this.token = $cookies.remove("token");
       this.isAuthenticated = false;
       this.userEmail = "";
     },
